@@ -1,0 +1,93 @@
+/* medienhaus.css */
+
+@import url("./normalize.css");
+@import url("./fonts.css");
+
+:root {
+  --color-foreground: 0 0 0;
+  --color-background: 250 250 250;
+  --margin: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: unset;
+  padding: unset;
+}
+
+html {
+  background-color: hsl(var(--color-background) / 1);
+  color: hsl(var(--color-foreground) / 1);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: 100%;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  padding: calc(var(--margin) * 0.8) calc(var(--margin) * 1)
+    calc(var(--margin) * 1.6);
+}
+
+body > * + *,
+body > * > * + * {
+  margin-top: var(--margin);
+}
+
+code {
+  background-color: hsl(var(--color-foreground) / 0.05);
+  font-family: "Roboto Mono", monospace;
+  font-weight: normal;
+  padding: 0 calc(var(--margin) * 0.2);
+  word-wrap: break-word;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: bold;
+  line-height: inherit;
+  margin: unset;
+}
+
+hr {
+  border-color: hsl(var(--color-foreground) / 0.2);
+  border-radius: unset;
+  border-style: solid;
+  border-width: calc(var(--margin) * 0.05);
+  margin: var(--margin) 0;
+}
+
+ul {
+  font-feature-settings: "case";
+  list-style-position: inside;
+  list-style-type: square;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-foreground: 255 255 255;
+    --color-background: 20 20 20;
+  }
+}
