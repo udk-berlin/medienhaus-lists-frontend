@@ -6,6 +6,8 @@
 :root {
   --color-background: 0 0% 100%;
   --color-foreground: 0 0% 0%;
+  --color-accent: 216 100% 50%;
+  --color-highlight: 264 100% 50%;
   --margin: 1rem;
 }
 
@@ -39,6 +41,26 @@ body {
 body > * + *,
 body > * > * + * {
   margin-top: var(--margin);
+}
+
+a:link {
+  color: hsl(var(--color-accent) / 100%);
+}
+
+a:visited {
+  color: hsl(var(--color-accent) / 100%);
+}
+
+a:hover {
+  color: hsl(var(--color-highlight) / 100%);
+}
+
+a:focus {
+  color: hsl(var(--color-highlight) / 100%);
+}
+
+a:active {
+  color: hsl(var(--color-highlight) / 100%);
 }
 
 code {
@@ -89,5 +111,7 @@ b {
   :root {
     --color-background: 0 0% 8%;
     --color-foreground: 0 0% 100%;
+    --color-accent: 205 100% 50%;
+    --color-highlight: 244 100% 70%;
   }
 }
