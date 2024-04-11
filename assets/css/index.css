@@ -34,8 +34,11 @@ html {
 body {
   font-size: 1rem;
   min-height: 100%;
-  padding: calc(var(--margin) * 0.8) calc(var(--margin) * 1)
-    calc(var(--margin) * 1.6);
+  padding: calc(var(--margin) * 0.8) calc(var(--margin) * 1) calc(var(--margin) * 1.6);
+}
+
+body > * {
+  max-width: 56ch;
 }
 
 body > * + *,
